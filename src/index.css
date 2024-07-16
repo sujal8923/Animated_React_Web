@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Petit+Formal+Script&family=Russo+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+@layer utilities{
+  .header{
+    animation:bounce 4s linear infinite;
+  }
+
+
+ .pushable{
+  background: hsl(200deg 100% 32%);
+  border-radius: 25px;
+  border:none;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  font-family:"Inter";
+  padding:0px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.12);
+  cursor:pointer;
+  outline-offset : 2px;
+ }
+ .pushable:active .front{
+  transform:translateY(-2px);
+ }
+ .front{
+  display:block;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 1.15rem;
+  background: #4169a1;
+  color: white;
+  font-family:"Inter";
+  transform:translateY(-5px);
+ }
+ .front2{
+  display:block;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 1.15rem;
+  background: hsl(202 99% 38%);
+  color: white;
+  font-family:"Inter";
+  transform:translateY(-5px);
+ }
+  @keyframes bounce {
+    0% {
+      transform: translateY(-15px)
+    }
+    50% {
+      transform: translateY(15px)
+    }
+    100% {
+      transform: translateY(-15px)
+    }
+  }
+}
